@@ -45,6 +45,7 @@ namespace pryClassVeterinaria
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.lstLista = new System.Windows.Forms.ListBox();
             this.mrcRepuesto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,13 +76,13 @@ namespace pryClassVeterinaria
             this.optImportado.Name = "optImportado";
             this.optImportado.Size = new System.Drawing.Size(72, 17);
             this.optImportado.TabIndex = 11;
-            this.optImportado.TabStop = true;
             this.optImportado.Text = "Importado";
             this.optImportado.UseVisualStyleBackColor = true;
             // 
             // optNacional
             // 
             this.optNacional.AutoSize = true;
+            this.optNacional.Checked = true;
             this.optNacional.Location = new System.Drawing.Point(79, 210);
             this.optNacional.Name = "optNacional";
             this.optNacional.Size = new System.Drawing.Size(67, 17);
@@ -176,6 +177,7 @@ namespace pryClassVeterinaria
             this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnCancelar
             // 
@@ -185,6 +187,7 @@ namespace pryClassVeterinaria
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnConsultar
             // 
@@ -194,6 +197,7 @@ namespace pryClassVeterinaria
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnSalir
             // 
@@ -203,12 +207,23 @@ namespace pryClassVeterinaria
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // lstLista
+            // 
+            this.lstLista.FormattingEnabled = true;
+            this.lstLista.Location = new System.Drawing.Point(12, 302);
+            this.lstLista.Name = "lstLista";
+            this.lstLista.Size = new System.Drawing.Size(292, 121);
+            this.lstLista.TabIndex = 5;
+            this.lstLista.Tag = "";
             // 
             // frmRepuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 307);
+            this.ClientSize = new System.Drawing.Size(498, 466);
+            this.Controls.Add(this.lstLista);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCancelar);
@@ -216,6 +231,7 @@ namespace pryClassVeterinaria
             this.Controls.Add(this.mrcRepuesto);
             this.Name = "frmRepuesto";
             this.Text = "Repuesto";
+            this.Load += new System.EventHandler(this.frmRepuesto_Load);
             this.mrcRepuesto.ResumeLayout(false);
             this.mrcRepuesto.PerformLayout();
             this.ResumeLayout(false);
@@ -240,6 +256,7 @@ namespace pryClassVeterinaria
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ListBox lstLista;
     }
 }
 

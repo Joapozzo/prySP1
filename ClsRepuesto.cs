@@ -8,16 +8,18 @@ namespace pryClassVeterinaria
 {
     class ClsRepuesto
     {
-        public int Codigo {get; set;}
+        public int Codigo { get; set; }
         public string Nombre { get; set; }
         public string Marca { get; set; }
         public decimal Precio { get; set; }
-        public bool Origen { get; set; }
+        public string Origen { get; set; }
 
-        public void Consultar()
+        public string ObtenerDatos()
         {
+            return "Codigo:  " + Codigo + " Nombre: " +
+            Nombre + " Marca: " + Marca + " Precio: " + Precio + " Origen: " + Origen;
 
         }
-   
+
     }
 }
